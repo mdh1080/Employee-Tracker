@@ -1,20 +1,21 @@
 USE employees_db;
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("John", "Doe", 1, 1),
-       ("Sally", "Smith", 2, 2),
-       ("Bob", "Jones", 3, 3);
+INSERT INTO employee (first_name, last_name, title, department, salary, manager)
+VALUES ("John", "Doe", "CEO", "Sales", 100000, "Bob"),
+       ("Jane", "Doe", "VP", "Engineering", 80000, "Sally"),
+       ("Sally", "Smith", "CFO", "Finance", 80000, "Bob");
 
 
-INSERT INTO role (title, salary, department_id)
-VALUES ("CEO", 100000, 1),
-       ("CFO", 80000, 1),
-       ("CTO", 80000, 1);
+INSERT INTO role (title, salary, department)
+VALUES ("CEO", 100000, "Sales"),
+       ("VP", 80000, "Engineering"),
+       ("CFO", 80000, "Finance");
+     
 
 INSERT INTO department (name)
 VALUES ("Sales"),
        ("Engineering"),
        ("Finance");
        
-       
+
        
